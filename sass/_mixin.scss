@@ -1,0 +1,44 @@
+// MEDIA QUERY MANAGE
+// 0 - 600px : mobile phone
+// 600- 900px : tablet portrait
+// 900 - 1200px : mobile landscape
+// [1200 - 1800] : normal css apply
+// 1800 + : big desktop
+
+@mixin respond-phone {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
+//@ breakpoint arguement choices
+// phone
+// tab-por
+// tab-land
+// big-desktop
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 600px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 900px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 1200px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 1800px) {
+      @content;
+    }
+  }
+}

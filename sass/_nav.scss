@@ -1,0 +1,59 @@
+nav {
+  padding: 10px 2%;
+  justify-content: space-between;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-left {
+  .logo {
+    @include respond(tab-port) {
+      width: 9rem;
+    }
+  }
+}
+
+.nav-middle {
+  .search__box {
+    border: 1px solid #ccc;
+    margin-right: 1.5rem;
+    padding: 0.8rem 1.2rem;
+    border-radius: 2.5rem;
+
+    input {
+      width: 40rem;
+      border: 0;
+      outline: none;
+      background: transparent;
+
+      @include respond(tab-port) {
+        width: 100px;
+      }
+    }
+
+    img {
+      width: 1.5rem;
+    }
+  }
+  .search__mic {
+    width: 1.6rem;
+
+    @include respond(tab-port) {
+      display: none;
+    }
+  }
+}
+
+.nav-right {
+  img {
+    width: 2.5rem;
+    margin-right: 2.5rem;
+
+    @include respond(tab-port) {
+      display: none;
+    }
+  }
+}
